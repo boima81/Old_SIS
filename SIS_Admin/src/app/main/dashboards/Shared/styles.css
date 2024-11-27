@@ -1,0 +1,8 @@
+/* styles.css */
+.textarea-border {
+  border: 1px solid #ccc; /* Change the color and width as needed */
+  padding: 8px; /* Add padding to make the text area look better */
+  border-radius: 4px; /* Optional: add rounded corners */
+  width: 100%; /* Ensure it takes full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}

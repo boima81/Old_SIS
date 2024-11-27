@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> <%=blocks.title%> - Sails Admin</title>
+        <%- include ../includes/cssfiles %>
+
+        <!-- temporary -->
+        <%- include ../includes/jsfiles %>
+    </head>
+    <body class="no-skin-config full-height-layout">
+        <div id="wrapper">
+            <%- include ../includes/sidenav %>
+            <div id="page-wrapper" class="gray-bg dashbard-1">
+                <%- include ../includes/topnav %>
+                <%= body %>
+                <%- include ../includes/footer %>
+            </div>
+        </div>
+
+        <%=blocks.scripts%>
+    </body>
+</html>

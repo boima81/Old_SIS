@@ -1,0 +1,39 @@
+<% if (userRecord && userRecord.id) { %>
+    <form id="userForm" method="POST" action="/admin/user/update/<%= userRecord.id %>">
+<% } else { %>
+    <form id="userForm" method="POST" action="/admin/user/create">
+<% } %>
+        <div class="form-group row">
+
+            <label class="col-sm-2 col-form-label">First Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="firstName" value="<% if (userRecord.firstName) { %><%= userRecord.firstName %><% } %>">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Last Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="lastName" value="<% if (userRecord.lastName) { %><%= userRecord.lastName %><% } %>">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="email" value="<% if (userRecord.email) { %><%= userRecord.email %><% } %>">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="password" value="">
+                <!-- <input type="password" class="form-control" name="password" value="<% if (userRecord.password) { %><%= userRecord.password %><% } %>"> -->
+            </div>
+        </div>
+        <div class="hr-line-dashed"></div>
+        <div class="form-group row">
+            <div class="col-sm-4 col-sm-offset-2">
+                <a href="/admin/users" class="btn btn-white btn-sm">Cancel</a>
+                <button class="btn btn-primary btn-sm" type="submit">Save changes</button>
+            </div>
+        </div>
+    </form>

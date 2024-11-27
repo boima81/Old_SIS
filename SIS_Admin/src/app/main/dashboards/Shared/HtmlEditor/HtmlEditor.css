@@ -1,0 +1,36 @@
+.wrapper-class {
+  width: auto;
+  border: none;
+  border-radius: 14px;
+  background-color: var(--gray);
+  padding: 20px;
+  outline: none;
+}
+.editor-class {
+  height: 20rem;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.ql-toolbar.ql-snow {
+  border-radius: 14px;
+}
+
+.ql-container.ql-snow {
+  width: auto;
+  border: none;
+  border-radius: 14px;
+  background-color: #ececec;
+  padding: 20px;
+  height: 20rem;
+  /* outline: none; */
+}
+.editor-class {
+  height: 20rem;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.editor-custom-height .ql-container {
+  height: 42rem !important;
+}

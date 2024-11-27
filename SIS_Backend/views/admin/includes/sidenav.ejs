@@ -1,0 +1,47 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <img alt="image" class="rounded-circle" src="/admin/images/profile_small.jpg"/>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="block m-t-xs font-bold"><%= (req.session && req.session.admin) ? req.session.admin.firstName + ' ' + req.session.admin.lastName : '' %></span>
+                        <span class="text-muted text-xs block">Admin <b class="caret"></b></span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                        <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                        <li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    <%= sails.config.shortName %>
+                </div>
+            </li>
+
+            <li class="<%= (['/admin/admins','/admin/create','/admin/edit/' + req.params['adminId']].includes(req.path)) ? 'active' : req.path %>">
+                <a href="/admin/admins">
+                    <i class="fa fa-users"></i>
+                    <span class="nav-label">Admins</span> <!--<span class="fa arrow"></span>-->
+                </a>
+            </li>
+
+            <li class="<%= (['/admin/users','/admin/user/create','/admin/user/edit/' + req.params['userId']].includes(req.path)) ? 'active' : req.path %>">
+                <a href="/admin/users">
+                    <i class="fa fa-user"></i>
+                    <span class="nav-label">Users</span> <!--<span class="fa arrow"></span>-->
+                </a>
+			</li>
+			
+			<li class="<%= (['/admin/list','/admin/list/create','/admin/list/edit/' + req.params['userId']].includes(req.path)) ? 'active' : req.path %>">
+                <a href="/admin/lists">
+                    <i class="fa fa-user"></i>
+                    <span class="nav-label">Lists</span> <!--<span class="fa arrow"></span>-->
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
